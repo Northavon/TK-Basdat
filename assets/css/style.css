@@ -1,0 +1,145 @@
+body {
+    background-color: #f7f7f7;
+    font-family: 'Lato', sans-serif;
+}
+
+.page-header h1 {
+    color: #4c4c4c;
+}
+
+.login-group {
+	margin-top: 100px;
+}
+
+.login-group h1{
+    font-size: 18pt;
+    margin-bottom: 0px;
+    font-weight: 100;
+	text-align: left;
+    text-transform: uppercase;
+    color: #42b9f4;
+}
+
+.register-group .form-control{
+	box-shadow: none;
+    background-color: transparent;
+    border-radius: 0px;
+    color: #42b9f4;
+}
+
+.form-control:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.login-group label {
+    color: #f7f7f7;
+}
+
+.inner-addon {
+    position: relative;
+}
+
+.inner-addon .glyphicon {
+	position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.left-addon .glyphicon { left: 0px;}
+
+.right-addon .glyphicon { right: 0px; }
+
+.left-addon input  { padding-left:  35px; }
+.right-addon input { padding-right: 35px; }
+
+.login-group .glyphicon {
+    color: #f7f7f7;
+}
+
+
+.underline-input{
+    padding: 10px;
+    padding-left: 30px;
+    border: none;
+    color: #f7f7f7;
+    border-bottom: solid 2px #C9C9C9;
+    transition: border 0.3s;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.login-group .form-control {
+    box-shadow: none;
+    background-color: transparent;
+    border-radius: 0px;
+    color: #f7f7f7;
+}
+
+.underline-input:focus,
+.underline-input.focus {
+    border-bottom: solid 2px #42b9f4;
+    outline: none;    
+}
+
+.panel-heading {
+	background-color: #636262;
+    padding: 80px 80px 15px 80px;
+}
+
+.panel-body {
+	background-color: #636262;
+    padding: 20px 80px 80px 80px;
+}
+
+.form-group .btn {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.navbar {
+    background-color: #636262;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #f7f7f7;
+}
+
+.navbar-default .navbar-nav > .active > a {
+    color: #42b9f4;
+}
+
+.navbar-default .navbar-brand {
+    color: #42b9f4;
+}
+
+.register-group h1{
+	color: #42b9f4;
+}
+
+.register-group label{
+	color: #f7f7f7;
+}
+
+.login-group .btn {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2pt;
+    margin-top: 25px;
+    font-size: 12pt;
+    border-radius: 0px;
+    text-transform: uppercase;
+    background: #42b9f4;
+}
+
+.login-group .btn:hover {
+    background-color: #3596c6;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.login-group .btn:active {
+    background-color: #1b516b;
+    box-shadow: none;
+    border-color: transparent;
+}
