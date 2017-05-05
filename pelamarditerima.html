@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-	<title>SIRIMA - Pendaftaran Semas</title>
-    <meta charset="utf-8">
+	<title>SIRIMA - Pelamar yang diterima</title>
+	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -23,9 +22,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body>
-    <!-- Fixed navbar -->
+	<!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -41,35 +39,77 @@
         </div>
     </nav>
 	
-    <!-- Begin page content -->
+	<!-- Begin page content -->
     <div class="container">
         <div class="page-header">
-            <center><h1>FORM PEMILIHAN JENJANG UNTUK PENDAFTARAN</h1> </div></center>
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <form role="form">
-                <div class="form-group">
-                    <label class="control-label" for="formInput163">Jenjang</label>
-                    <select id="formInput163" class="form-control">
-                        <option>S1</option>
-                        <option>S2</option>
-                        <option>S3</option>
-                    </select>
-                </div>
-                <div class="form-group"> </div>
-                <div class="form-group"> </div>
-                <div class="form-group"> </div>
-                <div class="checkbox"> </div>
-                <button type="submit" class="btn">PILIH</button>
-            </form>
-        </div>
-        <div class="col-md-3"></div>
+            <h1>FORM PEMILIHAN JENJANG UNTUK PENDAFTARAN</h1> 
+		</div>
+        <div id="selection">
+		<h2>Melihat daftar pelamar yang diterima</h2>
+		<div class="col-md-4">
+			<select id="periodeSelection">
+			  <option disabled selected>Periode:</option>
+			  <option value="12015">1-2015</option>
+			  <option value="22016">2-2016</option>
+			  <option value="32017">3-2017</option>
+			</select>
+		</div>
+		<div class="col-md-4">
+			<select id="jenjangSelection">
+			  <option disabled selected>Prodi:</option>
+			  <option value="S1">S1 Ilmu Komputer Reguler</option>
+			  <option value="S2">S2</option>
+			  <option value="S3">S3</option>
+			</select>
+		</div>
+	</div>
+
+	<div><button>Lihat</button></div>
+
+	<div>
+		<h3>Lihat Pelamar diterima</h3>
+		<h4>Prodi: S1 Ilmu Komputer Reguler</h4>
+		<table border="1px">
+			<thead>
+				<th>Id Pendaftaran</th>
+				<th>Nama Lengkap</th>
+				<th>Alamat</th>
+				<th>Jenis Kelamin</th>
+				<th>Tanggal Lahir</th>
+				<th>No KTP</th>
+				<th>Email</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1234</td>
+					<td>Tania Putri</td>
+					<td>Jl.Cendrawasih 2, Depok</td>
+					<td>Perempuan</td>
+					<td>2 Desember 1997</td>
+					<td>1234543234565432</td>
+					<td>tania@gmail.com</td>
+				</tr>
+				</tr>
+					<td>5678</td>
+					<td>Budi Baskara</td>
+					<td>Jl.Veteran 15, Jakarta</td>
+					<td>Laki-laki</td>
+					<td>15 November 1997</td>
+					<td>1928739865198273</td>
+					<td>budi@gmail.com</td>
+				<tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div>
+	<br>
+		<p align="right">1[pagination]</p>
+	</div>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <p class="text-muted">Place sticky footer content here.</p>
-        </div>
-    </footer>
+
+	
+	</footer>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -77,6 +117,6 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+	
 </body>
-
 </html>
