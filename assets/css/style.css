@@ -143,3 +143,8 @@ body {
     box-shadow: none;
     border-color: transparent;
 }
+
+h2.auth-error {
+    color: red;
+    font-size: 12pt;
+}
