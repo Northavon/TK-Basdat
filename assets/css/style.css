@@ -144,6 +144,15 @@ body {
     border-color: transparent;
 }
 
+.menu-group {
+    border: 2px solid #4c4c4c;
+    border-radius: 5px;
+}
+
+.menu-group a{
+	font-size: 14pt;
+}
+
 h2.auth-error {
     color: red;
     font-size: 12pt;
