@@ -4,21 +4,21 @@
      if(isset($_POST['login'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $result = pg_query("SELECT * FROM AKUN WHERE username='$username'");
-            $hasil = pg_fetch_row($result);
-            if($hasil[0] != null && $password == $hasil[2]) {
-                unset($_SESSION['auth-error']);
-                $_SESSION['username'] = $hasil[0];
-                $_SESSION['role'] = $hasil[1];
-                if($_SESSION['role'] == false){
-                    header("Location: index.php");
-                } else {
-                    header("Location: index.php");
-                }
+        $query = pg_query("SELECT * FROM AKUN WHERE username='$username'");
+        $result = pg_fetch_row($query);
+        if($result[0] != null && $password == $result[2]) {
+            unset($_SESSION['auth-error']);
+            $_SESSION['username'] = $result[0];
+            $_SESSION['role'] = $result[1];
+            if($_SESSION['role'] == false){
+                header("Location: index.php");
             } else {
-                $_SESSION['auth-error'] = 'true';
-                header("Location: login.php");
+                header("Location: index.php");
             }
+        } else {
+            $_SESSION['auth-error'] = 'true';
+            header("Location: login.php");
+        }
      }
 ?>
 <!DOCTYPE html>
@@ -43,7 +43,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     </head>
-    <body>
+    <body class="login-body">
         <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -60,7 +60,7 @@
                     ?>
                     <?php
                     if(!isset($_SESSION["username"])){ ?>
-                    <li> <a href="#contact">Sign Up</a> </li>
+                    <li> <a href="register.php">Sign Up</a> </li>
                      <?php 
                     }
                     ?>
@@ -107,6 +107,12 @@
                 <div class="col-md-3"></div>
             </div>
         </div>
+		
+		<footer class="footer">
+			<div class="col-md-12">
+				<h1>Copyright © 2016 Kelompok C06 Basis Data Genap 2017</h1>
+			</div>
+		</footer>
         
         <!-- Bootstrap core JavaScript
         ================================================== -->

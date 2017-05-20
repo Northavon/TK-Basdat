@@ -1,3 +1,12 @@
+<?php
+    include('config.php');
+    session_start();
+	unset($_SESSION['auth-error']);
+     if(isset($_SESSION['username'])){
+        header("Location:index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -25,12 +34,11 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">Sistem Informasi Penerimaan Mahasiswa</a> </div>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="index.php">Sistem Informasi Penerimaan Mahasiswa</a> </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li> <a href="#">Home</a> </li>
-					<li> <a href="#contact">Sign In</a> </li>
-                    <li class="active"> <a href="#contact">Sign Up</a> </li>
+					<li> <a href="login.php">Sign In</a> </li>
+                    <li class="active"> <a href="register.php">Sign Up</a> </li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -44,51 +52,50 @@
                         <h1>Form Pendaftaran Pelamar</h1>
                     </div>
                     <div class="panel-body">
-                        <form>
+                        <form action="register-handler.php" method="post">
                             <div class="form-group">
                                 <label for="username">Username:</label>
-                                <input class="form-control underline-input" type="text" id="username">
+                                <input class="form-control underline-input" type="text" id="username" name="username" required>
                             </div>
                             <div class="form-group">
-                                <label for="username">Password:</label>
-                                <input class="form-control underline-input" type="password" id="username">
+                                <label for="password">Password:</label>
+                                <input class="form-control underline-input" type="password" id="password" name="password" required>
                             </div>
                             <div class="form-group">
-                                <label for="username">Ulangi Password:</label>
-                                <input class="form-control underline-input" type="password" id="username">
+                                <label for="confirm-password">Ulangi Password:</label>
+                                <input class="form-control underline-input" type="password" id="confirm-password" name="confirm-password" required>
                             </div>
                             <div class="form-group">
-                                <label for="username">Nama Lengkap:</label>
-                                <input class="form-control underline-input" type="text" id="username">
+                                <label for="name">Nama Lengkap:</label>
+                                <input class="form-control underline-input" type="text" id="name" name="name" required>
                             </div>
                             <div class="form-group">
-                                <label for="username">Nomor Identitas:</label>
-                                <input class="form-control underline-input" type="text" id="username">
+                                <label for="no-id">Nomor Identitas:</label>
+                                <input class="form-control underline-input" type="text" id="no-id" name="no-id" required>
                             </div>
                             <div class="form-group">
-                                <label for="username">Jenis Kelamin:</label>
-                                <select class="form-control" id="sel1">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
+                                <label for="gender">Jenis Kelamin:</label>
+                                <select class="form-control form-select" id="gender" name="gender" required>
+                                    <option value="">Pilih Salah Satu:</option>
+                                    <option value="L">Laki-Laki</option>
+                                    <option value="P">Perempuan</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="username">Tanggal Lahir:</label>
-                                <input class="form-control underline-input" type="text" id="username">
+                                <label for="birthdate">Tanggal Lahir:</label>
+                                <input class="form-control underline-input" type="date" id="birthdate" name="birthdate" required>
                             </div>
                             <div class="form-group">
                                 <label for="username">Alamat:</label>
-                                <input class="form-control underline-input" type="text" id="username">
+                                <input class="form-control underline-input" type="text" id="address" name="address" required>
                             </div>
                             <div class="form-group">
                                 <label for="username">Alamat Email:</label>
-                                <input class="form-control underline-input" type="text" id="username">
+                                <input class="form-control underline-input" type="text" id="email" name="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="username">Konfirmasi Email:</label>
-                                <input class="form-control underline-input" type="text" id="username">
+                                <input class="form-control underline-input" type="text" id="confirm-email" name="confirm-email" required>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-primary">Daftar</button>
@@ -99,10 +106,17 @@
                 <div class="col-md-3"></div>
             </div>
         </div>
+		
+		<footer class="footer">
+			<div class="col-md-12">
+				<h1>Copyright © 2016 Kelompok C06 Basis Data Genap 2017</h1>
+			</div>
+		</footer>
         
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/validation.js"></script>
         <script src="assets/js/jquery.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

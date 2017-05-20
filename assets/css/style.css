@@ -69,6 +69,10 @@ body {
     margin-bottom: 10px;
 }
 
+.register-group .form-select{
+	border-color: transparent;
+}
+
 .login-group .form-control {
     box-shadow: none;
     background-color: transparent;
@@ -82,43 +86,92 @@ body {
     outline: none;    
 }
 
-.panel-heading {
-	background-color: #636262;
-    padding: 80px 80px 15px 80px;
+
+.login-group .panel-heading {
+	border-left: 5px solid #e2a500;
+	border-radius: 0px;
+	background-color: rgba(40,62,74,0.95);
+    padding: 80px 80px 15px;
 }
 
-.panel-body {
-	background-color: #636262;
+.login-group .panel-body {
+	border-left: 5px solid #e2a500;
+	border-radius: 0px;
+	background-color: rgba(40,62,74,0.95);
     padding: 20px 80px 80px 80px;
 }
 
 .form-group .btn {
     width: 100%;
-    padding: 15px 0;
+}
+
+.footer {
+	border-top: 3px solid #e2a500;
+	background-color: #283e4a; 
+}
+
+.footer h1 {
+	color: rgba(255,255,255,0.7);
+	font-size: 10pt;
+	text-align: center;
+}
+
+.bar {
+    background-color: #283e4a;
 }
 
 .navbar {
-    background-color: #636262;
+	background-color: #283e4a;
+	border-bottom: none;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #42b9f4;
 }
 
 .navbar-default .navbar-nav > li > a {
     color: #f7f7f7;
+	padding-bottom: 12px;
 }
 
 .navbar-default .navbar-nav > .active > a {
-    color: #42b9f4;
+    color: #f7f7f7;
+	background-color: #42b9f4;
+	border-bottom: 3px solid #e2a500;
+}
+
+.navbar-default .navbar-nav > .active > a:hover {
+    color: #f7f7f7;
+	background-color: #42b9f4;
 }
 
 .navbar-default .navbar-brand {
     color: #42b9f4;
 }
 
+.login-index-group h1 {
+	font-size: 16pt;
+	margin-bottom: 20px;
+	margin-top: 5px;
+	font-weight: 100;
+}
+
 .register-group h1{
+	font-family: 'Open Sans', sans-serif;
 	color: #42b9f4;
+	font-size: 22pt;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight: 700;
 }
 
 .register-group label{
 	color: #f7f7f7;
+}
+
+.login-index-group b {
+	color: #42b9f4;
+	font-weight: 300;
 }
 
 .login-group .btn {
@@ -144,16 +197,70 @@ body {
     border-color: transparent;
 }
 
+.register-group .btn {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2pt;
+    margin-top: 25px;
+    font-size: 12pt;
+    border-radius: 0px;
+    text-transform: uppercase;
+    background: #42b9f4;
+	border: none;
+}
+
+.register-group .btn:hover {
+    background-color: #3596c6;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.register-group .btn:active {
+    background-color: #1b516b;
+    box-shadow: none;
+    border-color: transparent;
+}
+
 .menu-group {
-    border: 2px solid #4c4c4c;
+    
     border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
 }
 
 .menu-group a{
-	font-size: 14pt;
+	font-size: 11pt;
+	color: #42b9f4;
+    margin:	8px 0 8px 0;
+}
+
+.login-body {
+	background: url(../img/apple-iphone-books-desk.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 }
 
 h2.auth-error {
     color: red;
     font-size: 12pt;
+}
+
+.register-group .panel-heading{
+    text-align: center;
+	
+}
+
+.register-group label{
+	color: #4c4c4c;
+}
+
+.register-group .panel-body{
+	color: transparent;
+}
+
+.recap-group .btn {
+	padding: 5px;
 }
